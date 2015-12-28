@@ -1,0 +1,23 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>controller.CitsController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/jsp/PopulateSearchTable</url-pattern>	
+		<url-pattern>/jsp/addEmployee.do</url-pattern>
+		<url-pattern>/jsp/transferEmployee.do</url-pattern>
+		<url-pattern>/jsp/deleteEmployee.do</url-pattern>
+		<url-pattern>/jsp/evaluateEmployee</url-pattern>	
+		<url-pattern>/jsp/trainingEmployee</url-pattern>
+		<url-pattern>/jsp/addEvaluation</url-pattern>
+		<url-pattern>/jsp/addTraining</url-pattern>
+		<!-- <url-pattern>/jsp/citsHome.jsp</url-pattern> -->
+	</servlet-mapping>
+</web-app>
