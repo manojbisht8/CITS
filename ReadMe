@@ -1,0 +1,47 @@
+Steps to install the code:
+Environment/IDE and Software:
+	Eclipse JEE IDE
+	Apache Tomcat (Version 8)
+	MySql DB.
+
+a)	DB Setup:
+1)	Run the SQL script provided. (CITS_SQL_script.sql)
+
+b)	Code/Workspace Setup:
+
+2)	In Eclipse IDE, perform
+File Menu  Import  Web  WAR File  WAR Import  Finish
+A project (CITS_Project) will be created in Eclipse.
+(As an alternative a new Dynamic web project can be created and the provided code “src” and WebContent” can replace the default/empty folders of the new project)
+
+3)	To compile the code.
+Project Menu  Clean  <Select Project>  Ok.
+No compilation error should be reported.
+
+4)	In case of any compilation errors due to missing JARs or if a new project is created instead of WAR import, we need to add external JARs.
+Select the project  Right click  Properties  Java Build Path  Libraries Tab  Add External Jars  <Select the below jars provided with code>  Apply  Ok.
+mysql-connector-java-5.1.31-bin.jar  (for JDBC connection to MySql DB).
+servlet-api.jar    (for J2EE web project)
+log4j-1.2.17.jar  (for logging)
+gson-2.5.jar       (for AJAX call from UI)
+
+5)	Configuration changes for DB and log file:
+In src/Cits.properties change the DB_USER_NAME and DB_PASSWRD accordingly.
+In src/log4j.xml change the log file path accordingly.
+
+6)	Configure Tomcat server with Eclipse (if not already done).
+http://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/
+
+7)	Add CITS_Project to Tomcat server in Eclipse.
+Select Tomcat server  Right click  Add/Remove.
+
+8)	Run the Project in Eclipse.
+In CITS_Project, go to WebContent/jsp as select citsHome.jsp   Right click  Run As Run on server  <Select Tomcat 8>  Finish
+
+9)	Copy the URL from Eclipse tab and run in Browser.
+Say: < http://localhost:8080/CITS_Project/jsp/citsHome.jsp>
+ 
+10)	For example in Google Chrome browser and perform various functions.
+
+ 
+
